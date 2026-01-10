@@ -36,6 +36,14 @@ public class SweetMailHooker {
      */
     public void sendKitMail(Player player, Kit kit, String title, String content) {
         try {
+            // 确保标题和内容不为空
+            if (title == null || title.isEmpty()) {
+                title = "礼包邮件";
+            }
+            if (content == null || content.isEmpty()) {
+                content = "您收到了一份礼包，请查收！";
+            }
+            
             IMail.MailDraft draft = IMail.api().createSystemMail("WkKit")
                     .setReceiverFromPlayer(player)
                     .setIcon("CHEST")
@@ -71,6 +79,14 @@ public class SweetMailHooker {
      */
     public void sendTextMail(Player player, String title, String content) {
         try {
+            // 确保标题和内容不为空
+            if (title == null || title.isEmpty()) {
+                title = "系统邮件";
+            }
+            if (content == null || content.isEmpty()) {
+                content = "您收到了一封邮件";
+            }
+            
             IMail.Status status = IMail.api().createSystemMail("WkKit")
                     .setReceiverFromPlayer(player)
                     .setIcon("PAPER")

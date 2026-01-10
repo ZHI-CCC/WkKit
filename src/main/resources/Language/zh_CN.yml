@@ -39,6 +39,7 @@ GUI_PAGETITLE: '第{page}页'
 GUI_PLAYER_NO_KIT: '很抱歉，您没有礼包！'
 
 # Kit Mail
+KIT_MAIL_TITLE: '礼包邮件'
 KITMAIL_TITLE: '礼包邮箱'
 KITMAIL_GETALL: '§a一键领取'
 
